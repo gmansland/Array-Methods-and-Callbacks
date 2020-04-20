@@ -12,14 +12,64 @@ console.log(fifaData);
 (d) Away Team goals for 2014 world cup final
 (e) Winner of 2014 world cup final */
 
+const hometeamname14 = [];
+fifaData.forEach(function(item){
+    if (item["Year"] === 2014) {
+    hometeamname14.push(item["Home Team Name"])
+    }
+    return (hometeamname14);
+});
 
+console.log(hometeamname14);
+
+// next
+
+const awayteamname14 = [];
+fifaData.forEach(function(item){
+    if (item["Year"] === 2014) {
+    awayteamname14.push(item["Away Team Name"])
+    }
+    return (awayteamname14);
+});
+
+console.log(awayteamname14);
+
+// next
+
+const hometeamgoal14 = [];
+fifaData.forEach(function(item){
+    if (item["Year"] === 2014) {
+    hometeamgoal14.push(item["Home Team Goals"])
+    }
+    return (hometeamgoal14);
+});
+
+console.log(hometeamgoal14);
+
+// next
+
+const awayteamgoal14 = [];
+fifaData.forEach(function(item){
+    if (item["Year"] === 2014) {
+    awayteamgoal14.push(item["Away Team Goals"])
+    }
+    return (awayteamgoal14);
+});
+
+console.log(awayteamgoal14);
+
+//next
+
+const winner2014 = [];
+
+if (hometeamgoal14 > awayteamgoal14) {
+  console.log(hometeamname14[0]);
+} else if (awayteamgoal14 > hometeamgoal14) {
+  console.log(awayTeamName14[0]);
+}
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-function getFinals(/* code here */) {
 
-    /* code here */
-
-};
 
 /* Task 3: Impliment a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
@@ -101,6 +151,6 @@ function getAverageGoals(/* code here */) {
 getAverageGoals();
 
 
-/// STRETCH 🥅 //
+// STRETCH 🥅 //
 
-/* Use the space below to work on any stretch goals of your chosing as listed in the README file. */
+// Use the space below to work on any stretch goals of your chosing as listed in the README file. //
